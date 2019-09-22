@@ -18,7 +18,7 @@ namespace LessonApp.Infrastructure.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("DataSource=../CS321_W5D2_BlogAPI.Infrastructure/blog.db");
+            optionsBuilder.UseSqlite("DataSource=../LessonApp.Infrastructure/lesson.db");
         }
     }
 }

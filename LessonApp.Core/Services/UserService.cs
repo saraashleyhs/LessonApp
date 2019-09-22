@@ -3,7 +3,7 @@ using System.Security.Claims;
 using LessonApp.Core.Services;
 using Microsoft.AspNetCore.Http;
 
-namespace CS321_W5D2_BlogAPI.Core.Services
+namespace LessonApp.Core.Services
 {
     public class UserService : IUserService
     {
