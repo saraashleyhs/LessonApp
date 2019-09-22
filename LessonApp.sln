@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonApp.API", "LessonApp\LessonApp.API.csproj", "{EAC0254E-E989-4AD5-A662-FDDCBF682520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonApp.Infrastructure", "LessonApp.Infrastructure\LessonApp.Infrastructure.csproj", "{56AC2BC4-7816-48C6-9832-8CB8A1B7C80A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonApp.Core", "LessonApp.Core\LessonApp.Core.csproj", "{A423DB68-FAD4-44D3-A960-C372F60E2501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAC0254E-E989-4AD5-A662-FDDCBF682520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC0254E-E989-4AD5-A662-FDDCBF682520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC0254E-E989-4AD5-A662-FDDCBF682520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC0254E-E989-4AD5-A662-FDDCBF682520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56AC2BC4-7816-48C6-9832-8CB8A1B7C80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AC2BC4-7816-48C6-9832-8CB8A1B7C80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AC2BC4-7816-48C6-9832-8CB8A1B7C80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56AC2BC4-7816-48C6-9832-8CB8A1B7C80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A423DB68-FAD4-44D3-A960-C372F60E2501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A423DB68-FAD4-44D3-A960-C372F60E2501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A423DB68-FAD4-44D3-A960-C372F60E2501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A423DB68-FAD4-44D3-A960-C372F60E2501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
