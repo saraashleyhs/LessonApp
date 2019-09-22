@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using LessonApp.Core;
+using LessonApp.Core.Models;
 
 namespace LessonApp.API.ApiModels
 {

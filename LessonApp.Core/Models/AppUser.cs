@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using LessonApp.Core.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace LessonApp.Core
+namespace LessonApp.Core.Models
 {
     public class AppUser : IdentityUser
     {
