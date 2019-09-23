@@ -13,7 +13,7 @@ namespace LessonApp.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            //Could Add some seed data here.
+            
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
