@@ -17,10 +17,9 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LessonApp": {
+    "LessonApp.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/lessons",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
