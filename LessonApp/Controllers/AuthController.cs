@@ -6,18 +6,21 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using LessonApp.API.ApiModels;
-using LessonApp.Core;
 using LessonApp.Core.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LessonApp.API.Controllers
 {
+    [EnableCors("AllowOrigin")]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     public class AuthController : Controller
     {
@@ -31,6 +34,7 @@ namespace LessonApp.API.Controllers
         }
 
         // POST api/values
+        [EnableCors("AllowOrigin")]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegistrationModel registration)
         {
@@ -59,6 +63,7 @@ namespace LessonApp.API.Controllers
         }
 
         // POST api/auth/login
+        [EnableCors("AllowOrigin")]
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody]LoginModel login)
@@ -95,11 +100,18 @@ namespace LessonApp.API.Controllers
             // add role claims
             claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
             // create the token
+            IdentityModelEventSource.ShowPII = true;
             var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.UtcNow.AddDays(7),
                 signingCredentials: credentials);
-            return tokenHandler.WriteToken(token);
+            try {
+                var myToken = tokenHandler.WriteToken(token);
+                return myToken; 
+            } catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private async Task<AppUser> AuthenticateUserAsync(string userName, string password)

@@ -27,10 +27,10 @@ namespace LessonApp.API.Controllers
         {
             try
             {
-                var allBlogs = _taskService
+                var allTasks = _taskService
                     .GetAllTasks(lessonId)
                     .ToApiModels();
-                return Ok(allBlogs);
+                return Ok(allTasks);
             }
             catch (Exception ex)
             {
